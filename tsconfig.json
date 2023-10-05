@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "es2017",
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@/*": ["*"],
+      "@api/*": ["api/*"],
+      "@config/*": ["config/*"],
+      "@interfaces/*": ["interfaces/*"],
+      "@middlewares/*": ["middlewares/*"],
+      "@utils/*": ["utils/*"],
+      "@services/*": ["services/*"],
+      "@dtos/*": ["dtos/*"],
+      "@exceptions/*": ["exceptions/*"],
+      "@helpers/*": ["helpers/*"],
+      "@repositories/*": ["repositories/*"]
+    },
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "outDir": "./dist",
+    "noEmit": false,
+    // "isolatedModules": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "skipLibCheck": true,
+    "noImplicitAny": false
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
