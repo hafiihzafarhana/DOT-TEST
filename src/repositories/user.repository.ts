@@ -85,7 +85,11 @@ class UserRepository {
     user_id: string,
     transactionId: string,
   ): Promise<BorrowBook | null> => {
-    return await BorrowBook.findByPk(transactionId, {
+    return await BorrowBook.findOne({
+      where: {
+        user_id,
+        id: transactionId,
+      },
       attributes: {
         exclude: ["user_id"],
       },

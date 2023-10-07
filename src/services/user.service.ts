@@ -26,7 +26,7 @@ class UserService {
     // const data = await User.findByPk(id);
     const data = await this.userRepository.getAllTransactionByUserId(id);
     if (!data) {
-      throw new HttpExceptionNotFound("User not found");
+      throw new HttpExceptionNotFound("User Transaction not found");
     }
 
     return data;
@@ -41,7 +41,7 @@ class UserService {
     // const data = await User.findByPk(id);
     const data = await this.userRepository.getDetailTransactionByUser(id, transactionId);
     if (!data) {
-      throw new HttpExceptionNotFound("User not found");
+      throw new HttpExceptionNotFound("User Transaction not found");
     }
 
     return data;
